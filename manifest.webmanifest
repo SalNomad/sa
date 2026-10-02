@@ -1,0 +1,11 @@
+{
+  "name": "Manasik Compass — Hajj & Umrah Guide",
+  "short_name": "Manasik",
+  "description": "Accessible multilingual Hajj and Umrah educational guide",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7f4",
+  "theme_color": "#4f786b",
+  "icons": [{"src":"assets/icons/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
