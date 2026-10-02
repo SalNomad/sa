@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "code": "xx",
+    "name": "Language name",
+    "dir": "ltr",
+    "status": "fallback",
+    "reviewedBy": [],
+    "lastReviewed": null
+  },
+  "strings": {
+    "brandSub": "",
+    "navToday": "",
+    "navJourney": "",
+    "navEmergency": "",
+    "todayTitle": "",
+    "emergencyTitle": "",
+    "wayfindingTitle": "",
+    "sourcesTitle": ""
+  }
+}

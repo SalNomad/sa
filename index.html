@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#365f56">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Manasik Compass — an accessible multilingual Hajj & Umrah guide with step-by-step rituals, Tawaf and Sa'i tracker, emergency contacts, maps, women's guidance, and verified sources.">
+  <meta name="keywords" content="Hajj guide, Umrah guide, مناسك, حج, عمرة, Tawaf tracker, Sai tracker, Makkah guide, Madinah guide">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Manasik Compass — Hajj & Umrah Guide">
+  <meta property="og:description" content="A calm, accessible, multilingual companion for Hajj and Umrah.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/icons/social-card.svg">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>Manasik Compass — Hajj & Umrah Guide | دليل الحج والعمرة</title>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Manasik Compass",
+    "alternateName":["دليل المناسك","Hajj & Umrah Guide"],
+    "description":"Accessible multilingual Hajj and Umrah educational guide",
+    "inLanguage":["ar","en","ur","id","tr","ru","de","zh","ha","fr","sw","ms","bn","fa","so","ps","ce"],
+    "isAccessibleForFree":true
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+<div id="srStatus" class="sr-only" role="status" aria-live="polite"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#home" aria-label="Manasik Compass home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" role="img"><path d="M24 4 7 13v22l17 9 17-9V13L24 4Z" fill="none" stroke="currentColor" stroke-width="2.7"/><path d="m24 11 8 13-8 13-8-13 8-13Z" fill="currentColor" opacity=".9"/></svg>
+      </span>
+      <span><b>Manasik Compass</b><small data-i18n="brandSub">Hajj & Umrah companion</small></span>
+    </a>
+
+    <div class="journey-switch" role="group" aria-label="Journey type">
+      <button class="journey-btn active" data-journey="umrah" aria-pressed="true">🕋 <span data-i18n="umrah">Umrah</span></button>
+      <button class="journey-btn" data-journey="hajj" aria-pressed="false">⛺ <span data-i18n="hajj">Hajj</span></button>
+    </div>
+
+    <div class="top-actions">
+      <button class="icon-btn emergency-mini" id="openEmergency" aria-label="Emergency information">SOS</button>
+      <label class="language-wrap"><span class="sr-only" data-i18n="language">Language</span><select id="languageSelect" aria-label="Language"></select></label>
+      <button class="icon-btn" id="fontToggle" aria-label="Increase text size">A+</button>
+      <button class="icon-btn" id="contrastToggle" aria-pressed="false"><span aria-hidden="true">◐</span><span class="hide-sm" data-i18n="contrast">Contrast</span></button>
+      <button class="icon-btn" id="menuToggle" aria-expanded="false" aria-controls="mobileNav">☰</button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="#today" data-i18n="navToday">Today</a>
+  <a href="#journey" data-i18n="navJourney">Journey</a>
+  <a href="#tracker" data-i18n="navTracker">Tracker</a>
+  <a href="#women-men" data-i18n="navEveryone">Men & women</a>
+  <a href="#emergency" data-i18n="navEmergency">Emergency</a>
+  <a href="#places" data-i18n="navPlaces">Places</a>
+  <a href="#wayfinding" data-i18n="navWayfinding">Wayfinding</a>
+  <a href="#accessibility" data-i18n="navAccess">Accessibility</a>
+</nav>
+
+<main id="main">
+  <section class="hero" id="home">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow"><span aria-hidden="true">✦</span><span data-i18n="eyebrow">Learn • perform • stay safe</span></div>
+        <h1 data-i18n="heroTitle">A calm companion for Hajj and Umrah</h1>
+        <p data-i18n="heroText">Step-by-step rites, authentic references, practical maps, emergency help, accessibility tools, and guidance for both women and men.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#journey"><span data-i18n="startJourney">Start the guide</span><span aria-hidden="true">→</span></a>
+          <a class="btn ghost" href="#emergency">☎ <span data-i18n="emergencyHelp">Emergency help</span></a>
+        </div>
+        <div class="trust-row" aria-label="Key qualities">
+          <span>✓ <span data-i18n="officialSources">Official sources</span></span>
+          <span>✓ <span data-i18n="hadithChecked">Hadith references</span></span>
+          <span>✓ <span data-i18n="offlineReady">Offline-ready</span></span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 520 430">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#f1d08d"/><stop offset="1" stop-color="#bd8e36"/></linearGradient>
+          </defs>
+          <circle cx="268" cy="198" r="160" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1.5"/>
+          <circle cx="268" cy="198" r="116" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.5"/>
+          <path d="M110 317c68-22 102-34 159-35 62-1 110 12 172 37" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="10" stroke-linecap="round"/>
+          <g transform="translate(197 112)">
+            <rect width="145" height="168" rx="5" fill="#101212"/>
+            <rect y="37" width="145" height="18" fill="url(#g1)"/>
+            <path d="M16 84h113M16 102h113" stroke="#3a3c3b" stroke-width="3"/>
+          </g>
+          <g transform="translate(78 57)">
+            <rect width="142" height="52" rx="18" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.18)"/>
+            <path d="M28 32h23M39.5 20.5v23" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            <text x="66" y="33" fill="#fff" font-size="15" font-family="system-ui">7 × Tawaf</text>
+          </g>
+          <g transform="translate(330 292)">
+            <rect width="150" height="58" rx="18" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.18)"/>
+            <path d="M24 20c16 0 16 18 32 18s16-18 32-18" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            <text x="95" y="35" fill="#fff" font-size="14" font-family="system-ui">Safa ↔ Marwah</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-strip" aria-label="Quick access">
+    <button data-scroll="#today"><span class="quick-icon">☀</span><span><b data-i18n="today">Today</b><small data-i18n="todayQuick">Hajj day & wellbeing</small></span></button>
+    <button data-scroll="#emergency"><span class="quick-icon">☎</span><span><b data-i18n="emergency">Emergency</b><small>911 · 997 · 937</small></span></button>
+    <button data-scroll="#tracker"><span class="quick-icon">⑦</span><span><b data-i18n="tracker">Tawaf & Sa'i</b><small data-i18n="savedOnDevice">Saved on device</small></span></button>
+    <button data-scroll="#places"><span class="quick-icon">⌖</span><span><b data-i18n="places">Places</b><small data-i18n="makkahMadinah">Makkah & Madinah</small></span></button>
+    <button data-scroll="#pilgrim-card"><span class="quick-icon">◫</span><span><b data-i18n="myCard">My pilgrim card</b><small data-i18n="privateLocal">Private & local</small></span></button>
+  </section>
+
+  <div class="page-grid">
+    <aside class="side-nav" aria-label="Section navigation">
+      <div class="side-kicker" data-i18n="contents">Contents</div>
+      <a href="#today" class="active"><span>01</span><b data-i18n="navToday">Today</b></a>
+      <a href="#journey"><span>02</span><b data-i18n="navJourney">Journey</b></a>
+      <a href="#tracker"><span>03</span><b data-i18n="navTracker">Tracker</b></a>
+      <a href="#women-men"><span>04</span><b data-i18n="navEveryone">Men & women</b></a>
+      <a href="#emergency"><span>05</span><b data-i18n="navEmergency">Emergency</b></a>
+      <a href="#wayfinding"><span>06</span><b data-i18n="navWayfinding">Wayfinding</b></a>
+      <a href="#places"><span>07</span><b data-i18n="navPlaces">Places</b></a>
+      <a href="#pilgrim-card"><span>08</span><b data-i18n="navMyCard">My card</b></a>
+      <a href="#accessibility"><span>09</span><b data-i18n="navAccess">Accessibility</b></a>
+      <a href="#sources"><span>10</span><b data-i18n="navSources">Sources</b></a>
+      <div class="side-note"><b data-i18n="fieldRule">At the Haram</b><p data-i18n="fieldRuleText">Live signs, staff instructions and crowd-control directions always take priority over a saved guide.</p></div>
+    </aside>
+
+    <div class="content">
+      <section class="section today-section" id="today">
+        <div class="section-head">
+          <div><span class="kicker" data-i18n="todayKicker">DURING YOUR PILGRIMAGE</span><h2 data-i18n="todayTitle">Today & wellbeing</h2><p data-i18n="todaySub">A simple day view, readiness checklist and gentle wellbeing tools. Your licensed group’s live schedule always takes priority.</p></div>
+          <div class="connection-pill" id="connectionStatus" role="status" aria-live="polite"><span class="connection-dot" aria-hidden="true"></span><span data-i18n="checkingConnection">Checking connection…</span></div>
+        </div>
+
+        <div class="today-grid">
+          <article class="hajj-day-card">
+            <div class="card-label"><span aria-hidden="true">☾</span><span data-i18n="hajjDayCompanion">Hajj day companion</span></div>
+            <div class="hijri-date" id="hijriDate" aria-live="polite"></div>
+            <label class="day-selector"><span data-i18n="showHajjDay">Show Hajj day</span><select id="hajjDaySelect"><option value="auto" data-i18n="automatic">Automatic</option><option value="8">8 Dhul-Hijjah</option><option value="9">9 Dhul-Hijjah</option><option value="10">10 Dhul-Hijjah</option><option value="11">11 Dhul-Hijjah</option><option value="12">12 Dhul-Hijjah</option><option value="13">13 Dhul-Hijjah</option></select></label>
+            <div id="hajjTodayCard" class="hajj-today-content"></div>
+            <p class="micro-note" data-i18n="hajjDateCaution">Hijri date detection uses the device’s Umm al-Qura calendar when available. Confirm the actual Hajj date, movement window and transport plan with your authorized organizer.</p>
+          </article>
+
+          <article class="wellbeing-card">
+            <div class="card-label"><span aria-hidden="true">☂</span><span data-i18n="heatSafety">Heat & wellbeing</span></div>
+            <h3 data-i18n="protectEnergy">Protect your energy</h3>
+            <div class="wellbeing-signs" aria-label="Heat safety reminders"><span>☂ <b data-i18n="shade">Shade</b></span><span>◒ <b data-i18n="fluids">Fluids</b></span><span>◌ <b data-i18n="rest">Rest</b></span><span>↔ <b data-i18n="followFlow">Follow flow</b></span></div>
+            <p data-i18n="heatText">Saudi health guidance emphasizes avoiding direct sun, drinking fluids regularly and resting. If you have a medical fluid restriction, follow your clinician’s instructions.</p>
+            <div class="wellbeing-timer" aria-live="polite"><div><small data-i18n="wellbeingCheck">Next wellbeing check</small><strong id="wellbeingCountdown">20:00</strong></div><button class="soft-btn" id="wellbeingToggle" type="button" data-i18n="startReminder">Start 20-min reminder</button></div>
+            <a class="source-link" href="https://www.moh.gov.sa/en/healthawareness/pilgrims-health/pages/heat-stress.aspx" target="_blank" rel="noopener"><span data-i18n="mohHeatGuidance">Saudi MOH heat guidance</span> ↗</a>
+          </article>
+        </div>
+
+        <div class="readiness-wrap">
+          <div class="readiness-head"><div><h3 data-i18n="readyBeforeMoving">Before you move</h3><p data-i18n="readySub">A small checklist saved only on this device.</p></div><button class="text-btn" id="resetChecklist" type="button" data-i18n="reset">Reset</button></div>
+          <div class="readiness-grid" id="readinessChecklist"></div>
+        </div>
+      </section>
+
+      <section class="section" id="journey">
+        <div class="section-head">
+          <div><span class="kicker" data-i18n="journeyKicker">STEP BY STEP</span><h2 id="journeyTitle">Umrah journey</h2><p data-i18n="journeySub">Follow the sequence, open a step, and mark what you have reviewed.</p></div>
+          <div class="head-actions">
+            <button class="soft-btn" id="readJourney">🔊 <span data-i18n="listen">Listen</span></button>
+            <button class="soft-btn" id="resetJourney"><span aria-hidden="true">↺</span> <span data-i18n="reset">Reset</span></button>
+          </div>
+        </div>
+
+        <div class="context-banner" id="translationNotice" hidden>
+          <span aria-hidden="true">🌐</span>
+          <div><b data-i18n="translationFallbackTitle">Translation coverage</b><p data-i18n="translationFallbackText">Navigation and safety text are translated. Detailed ritual notes may fall back to English until a reviewed translation is added.</p></div>
+        </div>
+
+        <div class="hajj-type-panel" id="hajjTypePanel" hidden>
+          <div>
+            <label for="hajjType" data-i18n="hajjTypeLabel">Hajj type</label>
+            <select id="hajjType">
+              <option value="tamattu">Tamattuʿ — Umrah then Hajj</option>
+              <option value="qiran">Qirān — Hajj & Umrah in one Ihram</option>
+              <option value="ifrad">Ifrād — Hajj only</option>
+            </select>
+          </div>
+          <p data-i18n="hajjTypeHelp">The timeline below focuses on the shared route and calls out important differences. Your licensed Hajj organizer's schedule takes priority for transport and movement.</p>
+        </div>
+
+        <div class="ritual-progress" aria-label="Journey progress"><div id="journeyProgress"></div></div>
+        <div class="journey-steps" id="journeySteps"></div>
+        <article class="step-detail" id="stepDetail" aria-live="polite"></article>
+      </section>
+
+      <section class="section" id="tracker">
+        <div class="section-head">
+          <div><span class="kicker" data-i18n="toolKicker">SIMPLE TOOL</span><h2 data-i18n="trackerTitle">Tawaf & Sa'i tracker</h2><p data-i18n="trackerSub">Large controls, vibration when available, screen-reader updates, and local-only storage.</p></div>
+          <span class="status-pill">🔒 <span data-i18n="localOnly">Local only</span></span>
+        </div>
+        <div class="tracker-grid">
+          <article class="counter-card" data-counter="tawaf">
+            <div class="counter-title"><span class="round-icon kaaba-mini" aria-hidden="true"></span><div><b data-i18n="tawaf">Tawaf</b><small data-i18n="sevenCircuits">7 circuits</small></div><button class="text-btn reset-counter" data-type="tawaf" data-i18n="reset">Reset</button></div>
+            <div class="ring" id="tawafRing" role="progressbar" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><div><strong id="tawafCount">0</strong><span>/ 7</span></div></div>
+            <div class="counter-message" id="tawafMessage" aria-live="polite"></div>
+            <div class="counter-buttons"><button class="counter-minus" data-type="tawaf" aria-label="Decrease Tawaf count">−</button><button class="counter-plus" data-type="tawaf"><span data-i18n="completeCircuit">Complete circuit</span> +</button></div>
+          </article>
+          <article class="counter-card" data-counter="sai">
+            <div class="counter-title"><span class="round-icon sai-mini" aria-hidden="true">↔</span><div><b data-i18n="sai">Sa'i</b><small data-i18n="sevenLegs">7 legs</small></div><button class="text-btn reset-counter" data-type="sai" data-i18n="reset">Reset</button></div>
+            <div class="ring" id="saiRing" role="progressbar" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><div><strong id="saiCount">0</strong><span>/ 7</span></div></div>
+            <div class="counter-message" id="saiMessage" aria-live="polite"></div>
+            <div class="counter-buttons"><button class="counter-minus" data-type="sai" aria-label="Decrease Sa'i count">−</button><button class="counter-plus" data-type="sai"><span data-i18n="completeLeg">Complete leg</span> +</button></div>
+          </article>
+        </div>
+        <div class="safety-note"><span aria-hidden="true">♥</span><div><b data-i18n="safetyFirst">Safety and calm come first.</b><p data-i18n="trackerSafety">Do not look at the screen while walking in dense crowds. Step aside safely before interacting with the tracker.</p></div></div>
+      </section>
+
+      <section class="section" id="women-men">
+        <div class="section-head"><div><span class="kicker" data-i18n="everyoneKicker">FOR EVERY PILGRIM</span><h2 data-i18n="everyoneTitle">Yes — this guide is for both women and men</h2><p data-i18n="everyoneSub">Most rites are shared. Where the Sunnah or official guidance differs, the difference is shown clearly without duplicating the entire guide.</p></div></div>
+        <div class="audience-tabs" role="tablist" aria-label="Audience guidance">
+          <button class="active" data-audience="all" role="tab" aria-selected="true" data-i18n="everyone">Everyone</button>
+          <button data-audience="women" role="tab" aria-selected="false" data-i18n="women">Women</button>
+          <button data-audience="men" role="tab" aria-selected="false" data-i18n="men">Men</button>
+        </div>
+        <div class="audience-grid" id="audienceCards"></div>
+      </section>
+
+      <section class="section emergency-section" id="emergency">
+        <div class="section-head emergency-head">
+          <div><span class="kicker" data-i18n="safetyKicker">SAFETY & SUPPORT</span><h2 data-i18n="emergencyTitle">Emergency & important numbers</h2><p data-i18n="emergencySub">Saudi numbers relevant to pilgrims. Tap to call on a phone. In a life-threatening emergency, contact emergency services immediately.</p></div>
+          <span class="verified-chip">✓ <span data-i18n="verifiedOfficialGuide">Verified against official Hajj guidance</span></span>
+        </div>
+        <div class="phone-grid" id="phoneGrid"></div>
+
+        <div class="emergency-map-card">
+          <div class="map-sign" aria-hidden="true"><svg viewBox="0 0 120 120"><path d="M60 8c-24 0-43 19-43 43 0 30 43 61 43 61s43-31 43-61C103 27 84 8 60 8Z" fill="none" stroke="currentColor" stroke-width="8"/><path d="M60 31v40M40 51h40" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></svg></div>
+          <div class="map-copy"><h3 data-i18n="whereAmI">Need to show where you are?</h3><p data-i18n="locationPrivacy">Use your browser's location only when you choose. The coordinate is displayed on your device and is not sent to this website.</p><div class="location-result" id="locationResult" hidden></div><div class="row"><button class="btn primary" id="getLocation">⌖ <span data-i18n="showLocation">Show my coordinates</span></button><a class="btn light" href="https://alharamain.gov.sa/public/?page=interactive_maps_en&amp;u=" target="_blank" rel="noopener"><span data-i18n="officialHaramMap">Official Haram map</span> ↗</a></div></div>
+        </div>
+
+        <details class="important-detail"><summary data-i18n="ifLost">If you are lost or separated from your group</summary><div class="detail-body"><ol><li data-i18n="lost1">Move out of the walking flow to a safe, visible area.</li><li data-i18n="lost2">Use an official information/security point rather than following strangers.</li><li data-i18n="lost3">Call your group leader or 1966 for Hajj/Umrah support; use 911 for an emergency.</li><li data-i18n="lost4">Share your hotel name, gate number, or coordinates if you know them.</li></ol></div></details>
+      </section>
+
+      <section class="section" id="wayfinding">
+        <div class="section-head"><div><span class="kicker" data-i18n="wayfindingKicker">ORIENTATION WITHOUT GUESSING</span><h2 data-i18n="wayfindingTitle">Wayfinding & show-to-staff cards</h2><p data-i18n="wayfindingSub">Use live signs and staff for gates, lifts, accessible routes and crowd diversions. These simple cards help when language or vision makes asking difficult.</p></div></div>
+
+        <div class="orientation-card">
+          <div class="orientation-diagram" aria-label="Simple orientation diagram, not a navigation map">
+            <svg viewBox="0 0 620 260" role="img" aria-labelledby="orientTitle orientDesc">
+              <title id="orientTitle">Simple Haram orientation concept</title><desc id="orientDesc">A schematic showing the Kaaba, Tawaf direction concept, Safa to Marwah, and a reminder to follow live exit and accessibility signs. Not to scale.</desc>
+              <rect x="250" y="78" width="120" height="120" rx="8" class="diagram-kaaba"/>
+              <rect x="250" y="103" width="120" height="15" class="diagram-band"/>
+              <path d="M225 53c-58 24-87 74-76 125 9 43 44 75 91 88M395 53c58 24 87 74 76 125-9 43-44 75-91 88" class="diagram-orbit"/>
+              <path d="M42 64h125M137 47l30 17-30 17" class="diagram-route"/>
+              <text x="42" y="42">Safa</text><text x="42" y="100">Marwah</text>
+              <g transform="translate(485 58)"><rect width="95" height="66" rx="14" class="diagram-sign"/><path d="M22 33h42m-13-13 18 13-18 13" class="diagram-white"/></g>
+              <g transform="translate(485 144)"><rect width="95" height="66" rx="14" class="diagram-sign"/><text x="48" y="44" text-anchor="middle" class="diagram-info">i</text></g>
+            </svg>
+            <span class="not-to-scale" data-i18n="notToScale">Schematic only — not to scale</span>
+          </div>
+          <div class="orientation-copy"><h3 data-i18n="liveMapFirst">Use the live official map for navigation</h3><p data-i18n="liveMapText">Gates, one-way flows, temporary closures and accessible paths can change. Do not navigate from a screenshot or this diagram.</p><a class="btn primary" href="https://alharamain.gov.sa/public/?page=interactive_maps_en&amp;u=" target="_blank" rel="noopener">⌖ <span data-i18n="officialHaramMap">Official Haram map</span> ↗</a></div>
+        </div>
+
+        <div class="sign-grid" aria-label="Common signs">
+          <article><span class="sign-pictogram">↗</span><b data-i18n="exitSign">Exit</b><small>مخرج</small></article>
+          <article><span class="sign-pictogram medical">✚</span><b data-i18n="firstAidSign">First aid</b><small>إسعاف</small></article>
+          <article><span class="sign-pictogram">♿</span><b data-i18n="accessibleRouteSign">Accessible route</b><small>مسار مهيأ</small></article>
+          <article><span class="sign-pictogram">i</span><b data-i18n="informationSign">Information</b><small>استعلامات</small></article>
+        </div>
+
+        <div class="phrase-head"><div><h3 data-i18n="showStaffTitle">Show this to a staff member</h3><p data-i18n="showStaffSub">Tap a card to enlarge it. The Arabic sentence stays visible even when your interface language is different.</p></div></div>
+        <div class="phrase-grid" id="helpPhraseGrid"></div>
+      </section>
+
+      <section class="section" id="places">
+        <div class="section-head">
+          <div><span class="kicker" data-i18n="placesKicker">WORSHIP • HISTORY • ORIENTATION</span><h2 data-i18n="placesTitle">Places in Makkah & Madinah</h2><p data-i18n="placesSub">Each card distinguishes a prescribed rite, an established Sunnah, and historical significance. Historical importance does not automatically mean there is a special reward for visiting.</p></div>
+        </div>
+        <div class="belief-legend">
+          <span class="legend worship">● <span data-i18n="legendRite">Rite / established Sunnah</span></span>
+          <span class="legend history">● <span data-i18n="legendHistory">Historical significance</span></span>
+          <span class="legend caution">● <span data-i18n="legendNoVirtue">No special visit virtue claimed</span></span>
+        </div>
+        <div class="place-toolbar">
+          <div class="filter-row" role="group" aria-label="Place filters">
+            <button class="filter-btn active" data-place-filter="all" data-i18n="all">All</button>
+            <button class="filter-btn" data-place-filter="makkah" data-i18n="makkah">Makkah</button>
+            <button class="filter-btn" data-place-filter="madinah" data-i18n="madinah">Madinah</button>
+            <button class="filter-btn" data-place-filter="hajj" data-i18n="hajjSites">Hajj sites</button>
+          </div>
+          <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only" data-i18n="searchPlaces">Search places</span><input id="placeSearch" type="search" data-i18n-placeholder="searchPlaces" placeholder="Search places"></label>
+        </div>
+        <div class="places-grid" id="placesGrid"></div>
+      </section>
+
+      <section class="section" id="pilgrim-card">
+        <div class="section-head"><div><span class="kicker" data-i18n="personalKicker">USEFUL IN A CROWD</span><h2 data-i18n="myCardTitle">My pilgrim card</h2><p data-i18n="myCardSub">Save a meeting point, hotel, and group contact on this device. Nothing is uploaded.</p></div><span class="status-pill">🔒 <span data-i18n="privateLocal">Private & local</span></span></div>
+        <div class="card-builder">
+          <form id="pilgrimForm" class="pilgrim-form">
+            <label><span data-i18n="meetingPoint">Meeting point</span><input id="meetingPoint" autocomplete="off" placeholder="e.g. Gate 79 / hotel lobby"></label>
+            <label><span data-i18n="hotelName">Hotel / accommodation</span><input id="hotelName" autocomplete="off"></label>
+            <label><span data-i18n="groupContact">Group leader / contact</span><input id="groupContact" autocomplete="off" inputmode="tel"></label>
+            <label><span data-i18n="notes">Short note</span><textarea id="pilgrimNotes" rows="3" maxlength="180"></textarea></label>
+            <div class="row"><button class="btn primary" type="submit" data-i18n="saveCard">Save card</button><button class="btn light" type="button" id="clearCard" data-i18n="clear">Clear</button></div>
+          </form>
+          <div class="pilgrim-preview" id="pilgrimPreview" aria-live="polite"><div class="preview-logo"><span class="kaaba-mini"></span><b>Manasik Compass</b></div><h3 data-i18n="myMeetingCard">My meeting card</h3><div id="previewContent" class="preview-content"><p data-i18n="cardEmpty">Add your details to create a quick card you can show to staff or your group.</p></div><button class="soft-btn" id="fullScreenCard" type="button" data-i18n="showLarge">Show large</button></div>
+        </div>
+      </section>
+
+      <section class="section" id="accessibility">
+        <div class="section-head"><div><span class="kicker" data-i18n="accessKicker">ACCESSIBILITY</span><h2 data-i18n="accessTitle">Designed for blind, low-vision and mobility users</h2><p data-i18n="accessSub">Semantic structure, keyboard support, large targets, text-to-speech, high contrast, reduced-motion respect, and no color-only instructions.</p></div></div>
+        <div class="feature-grid">
+          <article><div class="feature-icon">◐</div><h3 data-i18n="vision">Vision</h3><p data-i18n="visionText">Increase text size, enable high contrast, and keep controls large enough for touch.</p></article>
+          <article><div class="feature-icon">⌨</div><h3 data-i18n="keyboard">Keyboard</h3><p data-i18n="keyboardText">All interactive controls are reachable without a mouse, with a visible focus indicator.</p></article>
+          <article><div class="feature-icon">🔊</div><h3 data-i18n="speech">Speech</h3><p data-i18n="speechText">Read the current ritual step aloud using the voices installed on the device.</p></article>
+          <article><div class="feature-icon">♿</div><h3 data-i18n="mobility">Mobility</h3><p data-i18n="mobilityText">Links to official Haramain maps help locate lifts, wheelchair services and accessible routes; availability can change on site.</p></article>
+        </div>
+        <div class="access-actions"><button class="btn primary" id="installApp" type="button" hidden>＋ <span data-i18n="installApp">Install offline app</span></button><button class="btn light" id="readPage">🔊 <span data-i18n="readSection">Read this section</span></button><a class="btn light" href="https://alharamain.gov.sa/public/?page=interactive_maps_en&amp;u=" target="_blank" rel="noopener">♿ <span data-i18n="accessibleMap">Accessible facilities map</span> ↗</a></div>
+      </section>
+
+      <section class="section sources" id="sources">
+        <div class="section-head"><div><span class="kicker" data-i18n="evidenceKicker">EVIDENCE & FRESHNESS</span><h2 data-i18n="sourcesTitle">Sources and editorial rules</h2><p data-i18n="sourcesSub">Operational information changes. Ritual guidance is linked to official Saudi material and primary hadith references where practical.</p></div></div>
+        <div class="source-grid" id="sourceGrid"></div>
+        <div class="editorial-note"><h3 data-i18n="editorialTitle">Editorial rule for historical sites</h3><p data-i18n="editorialText">A place may be historically important without being a prescribed religious visit. This guide never turns historical association into a promise of spiritual reward unless a reliable text establishes it.</p><p><strong data-i18n="reviewed">Content review:</strong> <span>3 October 2026</span>. <span data-i18n="currentRules">For permits, opening routes, health requirements and crowd-control rules, always check current official sources before travel.</span></p></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<dialog id="phraseDialog" class="phrase-dialog">
+  <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+  <div id="phraseDialogContent"></div>
+</dialog>
+
+<dialog id="largeCardDialog" class="large-card-dialog">
+  <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+  <div id="largeCardContent"></div>
+</dialog>
+
+<dialog id="emergencyDialog" class="emergency-dialog">
+  <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+  <div class="dialog-emergency-icon">SOS</div><h2 data-i18n="emergencyTitle">Emergency & important numbers</h2><div id="dialogPhones"></div><a class="btn primary wide" href="#emergency" id="emergencyMore"><span data-i18n="moreEmergencyInfo">More emergency information</span></a>
+</dialog>
+
+<footer>
+  <div class="footer-inner">
+    <div><div class="footer-brand"><span class="kaaba-mini"></span><b>Manasik Compass</b></div><p data-i18n="footerText">An independent educational project. Not an official Saudi government service and not a substitute for qualified religious advice.</p></div>
+    <div class="footer-links"><a href="#sources" data-i18n="sourcesTitle">Sources</a><a href="https://haj.gov.sa/en/Awareness-Center/Awareness-Guides" target="_blank" rel="noopener">Ministry guides ↗</a><a href="https://www.nusuk.sa/" target="_blank" rel="noopener">Nusuk ↗</a></div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
